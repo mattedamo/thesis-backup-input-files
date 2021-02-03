@@ -11,14 +11,15 @@ frontend:
 db:
 - type: deployment
   secrets:
-  - MYSQL_ROOT_PASSWORD: password
+  - MYSQL_ROOT_PASSWORD: default-password
   - MYSQL_DATABASE: thesisAppMariadb 
 
 branch: master
 image:
   frontend:
-    tag: custom-tag
+    tag: custom
   backend:
     tag: custom-tag
 clusters: 
   - in-cluster
+  - second-cluster
